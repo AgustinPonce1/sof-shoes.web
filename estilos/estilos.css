@@ -1,0 +1,74 @@
+/* ESTILOS SOF SHOES */
+
+
+/* HEADER */ 
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 20%;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* HERO */
+
+.title-inicio{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.boton-productos {
+    font-size: 25px;
+    text-align: center;
+}
+
+.boton-productos a {
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: bold;
+    background-color: aqua;
+    border-radius: 20px;
+}
+
+.img-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-inicio img {
+    max-width: 100%;
+    height: 800px;
+}
