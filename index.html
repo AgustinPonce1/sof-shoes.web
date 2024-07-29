@@ -9,12 +9,20 @@
 </head>
 <body>
 
+    <!-- Barra de Anuncios -->
+
+    <div class="announcement-bar">
+        <p>3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | </p>
+    </div>
+
     <!-- Header -->
 
     <header>
         <div class="logo">
-            <img src="./media/logo.jpg" alt="LOGO">
-            <h1>Sof Shoes</h1>
+            <a href="index.html">
+                <img src="./media/logo.jpg" alt="LOGO">
+                <h1>Sof Shoes</h1>
+            </a>
         </div>
         <nav>
             <ul>
@@ -27,33 +35,62 @@
         </nav>
     </header>
 
-
-    <div id="Inicio">
-        <h1 class="title-inicio">Creando Modas</h1>
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="./media/video_hero.mp4" type="video/mp4">
+            Tu navegador no soporta el video HTML5.
+        </video>
+        <div class="contenido">
+            <h1>Creando Modas -- Sof Shoes 2024</h1>
+            <a href="./html-extensions/productos.html">
+                <button class="boton-productos">Ver Productos</button>
+            </a>
+        </div>
     </div>
     
-    <!-- Enlace Interno -->
-    <div class="boton-productos">
-         <a href="#productos">VER PRODUCTOS </a>
-    </div>
-         <br>
-    <div class="img-inicio">
-        <img src="media/img-1.webp" alt="">
-    </div>
 
-    <div id="productos">
-        <h2>Productos:</h2>
-        <ul>
-            <li>Producto 1</li>
-            <li>Producto 2</li>
-            <li>Producto 3</li>
-            <li>Producto 4</li>
-            <li>Producto 5</li>
-        </ul>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>SOF SHOES</h2>
+                <p>Tu tienda de calzado preferida con la mejor calidad y diseño.</p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; -> 11 2277 1244</span> <!-- El numero es de ejemplo, lo mismo con el e-mail -->
+                    <span><i class="fas fa-envelope"></i> &nbsp; -> info@sofshoes.com</span>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Enlaces Rápidos</h2>
+                <br>
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="./html-extensions/productos.html">Productos</a></li>
+                    <li><a href="./html-extensions/sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="./html-extensions/contacto.html">Contacto</a></li>
+                    <li><a href="./html-extensions/promociones.html">Promociones</a></li>
+                </ul>
+            </div>
 
-    <!-- Enlace Externo -->
-    <a target="_blank" href="https://api.whatsapp.com/send/?phone=5491176230998&text=Hola%2C%20quiero%20hacer%20una%20consulta">Contactanos por WhatsApp</a>
+            <!-- Sistema de Contacto en linea (no es funcional)-->
+            <div class="footer-section contact-form">
+                <h2>Contáctanos</h2>
+                <br>
+                <form action="index.html" method="post">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Tu correo electrónico...">
+                    <textarea name="message" class="text-input contact-input" placeholder="Tu mensaje..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; sofshoes.com | Diseñado por SOF SHOES 2024
+        </div>
+    </footer>
+    
 
 </body>
 </html>
