@@ -1,0 +1,108 @@
+/* FOOTER GENERAL */
+
+.footer {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 30px 20px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  
+      .footer-section {
+        flex: 1;
+        padding: 10px 20px;
+  
+        h2 {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+  
+        p,
+        ul {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+  
+        .contact {
+          span {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+          }
+        }
+  
+        &.links {
+          ul {
+            list-style: none;
+            padding: 0;
+  
+            li {
+              margin-bottom: 10px;
+  
+              a {
+                color: #ECF0F1;
+                text-decoration: none;
+                font-size: 14px;
+                transition: color 0.3s;
+  
+                &:hover {
+                  color: #3498DB;
+                }
+              }
+            }
+          }
+        }
+  
+        .contact-form {
+          display: flex;
+          flex-direction: column;
+  
+          .contact-input {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #BDC3C7;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #FFFFFF; 
+  
+            &:focus {
+              outline: none;
+              border-color: #3498DB;
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            }
+          }
+  
+          .btn {
+            background-color: #3498DB;
+            color: #FFFFFF;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+  
+            &:hover {
+              background-color: #2980B9;
+            }
+          }
+        }
+      }
+    }
+  
+    .footer-bottom {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      border-top: 1px solid #ECF0F1;
+      margin-top: 20px;
+    }
+  }
+  

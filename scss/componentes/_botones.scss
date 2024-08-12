@@ -1,0 +1,49 @@
+/* GLOBAL - BOTONES */
+
+/* BOTON VER PRODUCTOS */
+.boton-productos-heroinicio {
+    font-size: 23px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+  
+    &:hover {
+      text-decoration: none;
+      color: rgb(47, 46, 47);
+      font-weight: bold;
+      background-color: rgba(143, 142, 142, 0.8);
+      border-radius: 20px;
+    }
+  }
+
+  /* BOTON VOLVER AL INICIO */
+
+  .boton-volver {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+    background-color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+  
+    &:hover {
+      background-color: #444;
+      transform: scale(1.05);
+    }
+  
+    &:active {
+      background-color: #222;
+      transform: scale(0.95);
+    }
+  }

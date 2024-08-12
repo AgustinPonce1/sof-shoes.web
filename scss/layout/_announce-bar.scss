@@ -1,0 +1,34 @@
+/* BARRA DE ANUNCIOS */
+
+.announcement-bar {
+    width: 100%;
+    background-color: $highlight-color;
+    color: white;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+
+    p {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 12px;
+        animation: marquee 40s linear infinite;
+        animation-delay: 0s;
+    }
+}
+
+/* Este efecto lo encontre en internet por que vi este announce bar en otra web y queria replicarla */
+@keyframes marquee {
+    0% {
+        transform: translateX(60%);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}

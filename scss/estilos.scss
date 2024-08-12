@@ -1,0 +1,14 @@
+/* IMPORTACION DE ARCHIVOS - VINCULADO DE ESTILOS */
+
+@import "utilities/variables";
+@import "base/cuerpo";
+@import "layout/header-inicio";
+@import "componentes/botones";
+@import "layout/announce-bar";
+@import "layout/footer-general"; /* FIXEAR FOOTER PARTE CONTACTO */
+@import "layout/header-subwebs";
+@import "sub-webs/web-inicio.scss";
+@import "sub-webs/web-productos.scss";
+@import "sub-webs/web-contacto.scss";
+@import "sub-webs/web-sobrenosotros.scss";
+@import "sub-webs/web-promociones.scss";
