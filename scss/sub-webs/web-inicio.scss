@@ -55,12 +55,19 @@
     margin-top: 40px;
     border-radius: 20px;
     font-weight: bold;
+    transition: all 0.3s ease;
 
     &:hover {
         text-decoration: none;
         color: rgb(47, 46, 47);
         background-color: rgba(143, 142, 142, 0.8);
         border-radius: 20px;
+        transform: scale(1.05); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    }
+
+    &:active {
+        transform: scale(0.98);
     }
 }
 
@@ -73,4 +80,179 @@
         max-width: 100%;
         height: 800px;
     }
+}
+
+/* Estilos para la Sección del Local */
+.local-section {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+
+    .local-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease, transform 1s ease;
+
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .local-info {
+            h2 {
+                font-size: 2.5em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1.2em;
+                color: #666;
+                margin-bottom: 20px;
+            }
+
+            .btn-map {
+                padding: 10px 20px;
+                background-color: #000;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #444;
+                }
+            }
+        }
+    }
+}
+
+/* Animación SCSS para visibilidad */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.local-content {
+    animation: fadeIn 1s ease forwards;
+}
+
+.productos-destacados {
+    margin-top: 60px;
+    padding: 20px;
+
+    .title-productos {
+        text-align: center;
+        font-size: 1.8em;
+        color: #333;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 6px;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: #000;
+            margin: 6px auto 0;
+        }
+    }
+
+    .product-carousel {
+        display: flex;
+        overflow: hidden;
+
+        .product-item {
+            border: 1px solid #ddd;
+            padding: 6px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 6px;
+            margin-right: 8px;
+            flex: 0 0 auto;
+            width: 140px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center top;
+
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 6px;
+                margin-bottom: 6px;
+            }
+
+            h3 {
+                font-size: 0.8em;
+                margin: 4px 0;
+                color: #333;
+            }
+
+            p {
+                font-size: 0.7em;
+                color: #666;
+                margin-bottom: 6px;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+
+            .btn-primary {
+                padding: 4px 8px;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #444;
+                }
+            }
+        }
+    }
+}
+
+.product-carousel {
+    .slick-slide {
+        margin: 0 6px;
+    }
+
+    .slick-prev, .slick-next {
+        z-index: 1;
+    }
+}
+
+/* Animación de Deslizamiento */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 1.5s ease-out;
 }

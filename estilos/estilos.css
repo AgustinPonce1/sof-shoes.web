@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* IMPORTACION DE ARCHIVOS - VINCULADO DE ESTILOS */
 /* Variables */
 body {
@@ -230,7 +231,6 @@ body {
   margin-top: 20px;
 }
 
-/* FIXEAR FOOTER PARTE CONTACTO */
 /* SubWebs Header */
 .alternativo-header {
   display: flex;
@@ -344,12 +344,18 @@ body {
   margin-top: 40px;
   border-radius: 20px;
   font-weight: bold;
+  transition: all 0.3s ease;
 }
 .boton-productos:hover {
   text-decoration: none;
   color: rgb(47, 46, 47);
   background-color: rgba(143, 142, 142, 0.8);
   border-radius: 20px;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.boton-productos:active {
+  transform: scale(0.98);
 }
 
 .img-inicio {
@@ -360,6 +366,158 @@ body {
 .img-inicio img {
   max-width: 100%;
   height: 800px;
+}
+
+/* Estilos para la Sección del Local */
+.local-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.local-section .local-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.local-section .local-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.local-section .local-content .local-info h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+.local-section .local-content .local-info p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 20px;
+}
+.local-section .local-content .local-info .btn-map {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.local-section .local-content .local-info .btn-map:hover {
+  background-color: #444;
+}
+
+/* Animación SCSS para visibilidad */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.local-content {
+  animation: fadeIn 1s ease forwards;
+}
+
+.productos-destacados {
+  margin-top: 60px;
+  padding: 20px;
+}
+.productos-destacados .title-productos {
+  text-align: center;
+  font-size: 1.8em;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+}
+.productos-destacados .title-productos::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #000;
+  margin: 6px auto 0;
+}
+.productos-destacados .product-carousel {
+  display: flex;
+  overflow: hidden;
+}
+.productos-destacados .product-carousel .product-item {
+  border: 1px solid #ddd;
+  padding: 6px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  margin-right: 8px;
+  flex: 0 0 auto;
+  width: 140px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center top;
+}
+.productos-destacados .product-carousel .product-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+.productos-destacados .product-carousel .product-item h3 {
+  font-size: 0.8em;
+  margin: 4px 0;
+  color: #333;
+}
+.productos-destacados .product-carousel .product-item p {
+  font-size: 0.7em;
+  color: #666;
+  margin-bottom: 6px;
+}
+.productos-destacados .product-carousel .product-item a {
+  text-decoration: none;
+}
+.productos-destacados .product-carousel .product-item .btn-primary {
+  padding: 4px 8px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.productos-destacados .product-carousel .product-item .btn-primary:hover {
+  background-color: #444;
+}
+
+.product-carousel .slick-slide {
+  margin: 0 6px;
+}
+.product-carousel .slick-prev, .product-carousel .slick-next {
+  z-index: 1;
+}
+
+/* Animación de Deslizamiento */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slide-in {
+  animation: slideIn 1.5s ease-out;
 }
 
 /* WEB PRODUCTOS */
@@ -456,6 +614,67 @@ body {
   margin-top: 100px;
 }
 
+#contacto {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#contacto .title-contacto {
+  color: #333;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#contacto .form-control {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+#contacto .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+#contacto .form-group {
+  margin-bottom: 20px;
+}
+#contacto label {
+  font-weight: 500;
+}
+#contacto .form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#contacto .form-check-input {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+#contacto .form-check-label {
+  font-size: 1em;
+  color: #333;
+}
+#contacto .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1em;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#contacto .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+@media (max-width: 768px) {
+  #contacto .form-group {
+    margin-bottom: 15px;
+  }
+}
+
 /* PAG SOBRE NOSOTROS */
 #sobre-nosotros {
   background-color: #f9f9f9;
@@ -533,6 +752,136 @@ body {
 /* PAG PROMOCIONES */
 .pag-promociones {
   margin-top: 100px;
+}
+
+#promociones {
+  margin-top: 100px;
+}
+#promociones .title-promociones {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+#promociones .title-promociones::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #000;
+  margin: 10px auto 0;
+}
+#promociones .promotion-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+#promociones .promotion-card .promotion-image {
+  position: relative;
+}
+#promociones .promotion-card .promotion-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+#promociones .promotion-card .promotion-image .discount-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#promociones .promotion-card .promotion-image .price-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+#promociones .promotion-card .promotion-image .price-info .price-new {
+  font-size: 1.5em;
+  color: #e74c3c; /* Rojo para el precio rebajado */
+  margin-bottom: 5px;
+}
+#promociones .promotion-card .promotion-image .price-info .price-old {
+  font-size: 1em;
+  color: #999;
+  text-decoration: line-through;
+}
+#promociones .promotion-card .promotion-info {
+  padding: 15px;
+  text-align: center;
+}
+#promociones .promotion-card .promotion-info .product-title {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
+}
+#promociones .promotion-card .promotion-info .btn-primary {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#promociones .promotion-card .promotion-info .btn-primary:hover {
+  background-color: #444;
+}
+#promociones .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  animation: pulse 1.5s infinite;
+}
+
+.whatsapp-button img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Efecto de pulsación en el botón */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Efecto de hover en el botón */
+.whatsapp-button:hover {
+  background-color: #128C7E;
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=estilos.css.map */

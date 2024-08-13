@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="./estilos/estilos.css"> <!-- Ruta de Estilos -->
     <link rel="icon" href="./media/logo.jpg" type="image/png">
     <title>Sof Shoes</title>
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
 
     <!-- Barra de Anuncios -->
-
     <div class="announcement-bar">
-        <p>3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | 3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS.                  MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA | </p>
+        <p>3 CUOTAS SIN INTERES EN PRODUCTOS SELECCIONADOS. MINIMO DE COMPRA GENERAL: $20.000 | ENVIOS EN EL DIA...</p>
     </div>
 
     <!-- Header -->
-
     <header class="main-header">
         <div class="logo">
             <a href="index.html">
@@ -26,11 +29,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>    <!-- Enlace Relativo -->
-                <li><a href="./html-extensions/productos.html">Productos</a></li>   <!-- Enlace Relativo -->
-                <li><a href="./html-extensions/promociones.html">Promociones</a></li>   <!-- Enlace Relativo -->
-                <li><a href="./html-extensions/sobre-nosotros.html">Sobre Nosotros</a></li>   <!-- Enlace Relativo -->
-                <li><a href="./html-extensions/contacto.html">Contacto</a></li>   <!-- Enlace Relativo -->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./html-extensions/productos.html">Productos</a></li>
+                <li><a href="./html-extensions/promociones.html">Promociones</a></li>
+                <li><a href="./html-extensions/sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="./html-extensions/contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -47,7 +50,61 @@
             </a>
         </div>
     </div>
-    
+
+    <!-- Sección de Productos Destacados -->
+    <section id="productos-destacados" class="productos-destacados slide-in">
+        <h2 class="title-productos">Productos Destacados</h2>
+        <div class="product-carousel">
+            <div class="product-item">
+                <img src="./media/Productos/Img5-ZapatillasAdidasBreaknet2.0Blanca.jpg" alt="Producto Destacado 1">
+                <h3>Zapatillas Adidas Breaknet 2.0 Blanca</h3>
+                <a href="./html-extensions/productos.html" class="btn-primary">Comprar</a>
+            </div>
+            <div class="product-item">
+                <img src="./media/Productos/Img7-ZapatillasColon.jpg" alt="Producto Destacado 2">
+                <h3>Zapatillas Colon</h3>
+                <a href="./html-extensions/productos.html" class="btn-primary">Comprar</a>
+            </div>
+            <div class="product-item">
+                <img src="./media/Productos/Img9-BotasPensfordSEXKSR.jpg" alt="Producto Destacado 3">
+                <h3>Botas Pensford SEXKSR</h3>
+                <a href="./html-extensions/productos.html" class="btn-primary">Comprar</a>
+            </div>
+            <div class="product-item">
+                <img src="./media/Productos/Img8-ZapatillasTenisAdidasGamecourtMujerGris.jpg" alt="Producto Destacado 4">
+                <h3>Zapatillas Tenis Adidas Gamecourt Mujer Gris</h3>
+                <a href="./html-extensions/productos.html" class="btn-primary">Comprar</a>
+            </div>
+            <div class="product-item">
+                <img src="./media/Productos/Img6-ZapatillasHombreTheBrakerLt.jpg" alt="Producto Destacado 5">
+                <h3>Zapatillas Hombre The Braker LT</h3>
+                <a href="./html-extensions/productos.html" class="btn-primary">Comprar</a>
+            </div>
+            <div class="product-item">
+                <img src="./media/Productos/Img4-ZapatillasAdidasCourtPlatformMujerGris.jpg" alt="Producto Destacado 6">
+                <h3>Zapatillas Adidas Court Platform Mujer Gris</h3>
+                <a href="./html-extensions/productos.html" class="btn-primary">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección del Local -->
+    <section id="local" class="local-section">
+        <div class="container">
+            <div class="local-content">
+                <div class="local-info">
+                    <h2>Visítanos</h2>
+                    <p>Conoce nuestro local y explora nuestras colecciones en persona. ¡Estamos esperándote!</p>
+                    <a href="https://maps.app.goo.gl/hQuEy5NFKBR7MYrYA" class="btn btn-map" target="_blank">Ver en Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/1122771244" class="whatsapp-button" target="_blank">
+        <img src="./media/Icons/botonwsp.png" alt="WhatsApp BOTON IMG">
+    </a>
 
     <!-- Footer -->
     <footer class="footer">
@@ -56,7 +113,7 @@
                 <h2>SOF SHOES</h2>
                 <p>Tu tienda de calzado preferida con la mejor calidad y diseño.</p>
                 <div class="contact">
-                    <span><i class="fas fa-phone"></i> &nbsp; -> 11 2277 1244</span> <!-- El numero es de ejemplo, lo mismo con el e-mail -->
+                    <span><i class="fas fa-phone"></i> &nbsp; -> 11 2277 1244</span>
                     <span><i class="fas fa-envelope"></i> &nbsp; -> info@sofshoes.com</span>
                 </div>
             </div>
@@ -71,8 +128,6 @@
                     <li><a href="./html-extensions/promociones.html">Promociones</a></li>
                 </ul>
             </div>
-
-            <!-- Sistema de Contacto en linea (no es funcional)-->
             <div class="footer-section contact-form">
                 <h2>Contáctanos</h2>
                 <br>
@@ -90,6 +145,8 @@
             &copy; sofshoes.com | Diseñado por SOF SHOES 2024
         </div>
     </footer>
-    
+
+    <script src="./js/javascript.js"></script> <!-- Ruta JAVASCRIPT -->
+
 </body>
 </html>
